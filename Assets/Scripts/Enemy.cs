@@ -14,15 +14,13 @@ public class Enemy : MonoBehaviour, IPointerClickHandler
         _animator.SetTrigger("Destroy");
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _direction = new Vector3(Random.Range(-1f , 1f), Random.Range(-1f, 1f), 0);
         _animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         transform.Translate(_direction * Time.deltaTime * _speed);
     }

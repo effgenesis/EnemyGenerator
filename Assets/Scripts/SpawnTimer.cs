@@ -12,14 +12,7 @@ public class SpawnTimer : MonoBehaviour
     private int _currentSpawnPoint;
     [SerializeField] private UnityEvent _spawnEnemy;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         _spawnTimer -= Time.deltaTime;
         if (_spawnTimer <= 0)
